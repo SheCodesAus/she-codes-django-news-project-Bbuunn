@@ -1,6 +1,8 @@
 <nav>
     <a href="{% url 'news:index' %}">Home</a>
-    <a href="#">username</a>
+    <a href="{% url 'news:addStory' %}">Add Story</a>
+    {# addStory is from news/urls.py #}
+    <a href="#">Username</a>
     <a href="#">Logout</a>
     <a href="#">Login</a>
 </nav>
