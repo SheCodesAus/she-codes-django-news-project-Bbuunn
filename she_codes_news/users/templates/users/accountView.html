@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% comment %} 
+{% load static %}
+{% block stylesheets %}
+<link rel='stylesheet' type='text/css' href="{% static 'news/styles.css' %}">
+{% endblock%}
+{% endcomment %}
+
+{% block content %}
+<div id="user">
+  <h2>Account Information:</h2>
+  <h4>Username: {{ user.username }}</h4>
+  <h4>Email: {{ user.email }}</h4>
+  <h4>Last login: {{ user.last_login }}</h4>
+  <h4>Date joined: {{ user.date_joined }}</h4>
+</div>
+{% endblock %}
