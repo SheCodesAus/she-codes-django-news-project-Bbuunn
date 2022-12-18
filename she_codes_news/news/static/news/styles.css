@@ -2,8 +2,8 @@
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
-    background-color: rgb(243, 243, 243);
-    box-shadow: 2px 2px 5px gainsboro;
+    background-color: white;
+    box-shadow: 2px 2px 5px darkgray;
 }
 
 .story-card img {
