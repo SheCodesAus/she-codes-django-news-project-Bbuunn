@@ -50,7 +50,7 @@ h1 {
 }
 
 h2 {
-    padding-top: 50px;
+    margin-top: 50px;
 }
 
 h3 {
@@ -80,6 +80,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    text-transform: capitalize;
 }
 
 #nav {

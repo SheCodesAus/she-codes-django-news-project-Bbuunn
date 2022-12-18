@@ -12,7 +12,11 @@
     <a href="{% url 'news:byAuthor' auth_id=story.author_id %}">{{ story.author }}
     </a>
   </h4>
-  <div id="story-content">
+  {% if request.user.id == story.author_id %}
+    <a href="{% url 'news:storyEdit' pk=story.id %}">Edit this post</a>
+    <a href="{% url 'news:storyDelete' pk=story.id %}">Delete this post</a>
+  {% endif %}
+    <div id="story-content">
     <img src="{{story.image_url}}"/>
     {{ story.content|linebreaks }}
   </div>
