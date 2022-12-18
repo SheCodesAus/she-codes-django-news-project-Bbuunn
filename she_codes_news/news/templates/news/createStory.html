@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block content %}
-
+<div id="contents">
 {% if request.user.is_authenticated %}
     <form action="" method="post">
         {% csrf_token %}
@@ -17,5 +17,5 @@
     <p> Please <a href="{% url 'login' %}">login</a> or <a href="{% url 'users:createAccount' %}">create account</a> to create story.</p>
 
 {% endif %}
-
+</div>
 {% endblock %}

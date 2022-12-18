@@ -6,9 +6,7 @@
     <a href="{% url 'news:story' story.id %}">
       <h3>{{ story.title }}</h3>
     </a>
-    <a href="{% url 'news:byAuthor' auth_id=story.author_id %}">
-      <h4>{{ story.author }}</h4>
-    </a>
     <h4>{{ story.pub_date }}</h4>
+    <h4>Written by: <a href="{% url 'news:byAuthor' auth_id=story.author_id %}">{{ story.author }}</a></h4>
   </div>
 </div>

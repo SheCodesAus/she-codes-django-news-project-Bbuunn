@@ -7,8 +7,6 @@
     <title>She Codes News</title>
     <meta name="description" content="">
     <meta name="author" content="Bunny">
-    {% comment %} <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet"> {% endcomment %}
-    <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css"> 
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
     {% block stylesheets %}{% endblock %}
   </head>
@@ -21,14 +19,13 @@
       </div>
       <div id="header-text">
         <a id="header-link" href="{% url 'news:index' %}">
-          <p><img src="{% static "news/images/logo_long.png" %}" alt="home" /></p>
+          <img src="{% static "news/images/logo_long.png" %}" alt="home" />
           <p>She Codes News:</p>
         </a>
       </div>
     </header>
-
     <!-- content blocks here -->
-    {% block content %}{% endblock %}
-
+    {% block content %}
+    {% endblock %}
   </body>
 </html>

@@ -1,22 +1,23 @@
 .story-card {
-    margin: 2px;
-    border: 1px solid #000;
-    padding: 5px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(243, 243, 243);
+    box-shadow: 2px 2px 5px gainsboro;
 }
 
 .story-card img {
     width: 100%;
-    height: 300px;
+    height: 200px;
     object-fit: cover;
 }
 
 #latest-stories {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     gap: 1px 1px;
-    grid-template-areas: "left-1 right-1" "left-1 right-2" "left-1 right-3";
-    max-height: 500px;
+    grid-template-areas: "left-1 right-1 right-2 right-3";
 }
 
 #story-card-1 {
@@ -33,35 +34,6 @@
 
 #story-card-4 {
     grid-area: right-3;
-}
-
-#story-card-2 a,
-#story-card-3 a,
-#story-card-4 a {
-    display: flex;
-    max-height: 120px;
-    width: 100%;
-    height: 100%;
-}
-
-#story-card-2 .story-card-text h3,
-#story-card-3 .story-card-text h3,
-#story-card-4 .story-card-text h3 {
-    font-size: 16px;
-}
-
-#story-card-2 .story-card-text h4,
-#story-card-3 .story-card-text h4,
-#story-card-4 .story-card-text h4 {
-    font-size: 12px;
-}
-
-#story-card-2 img,
-#story-card-3 img,
-#story-card-4 img {
-    width: 33%;
-    height: 100%;
-    margin-right: 5px;
 }
 
 #all-stories {
@@ -85,28 +57,6 @@
     width: 50%;
 }
 
-
-:root {
-    --active-brightness: 0.85;
-    --border-radius: 5px;
-    --box-shadow: 2px 2px 10px;
-    --color-accent: #a111ee15;
-    --color-bg: #fff;
-    --color-bg-secondary: #e9e9e9;
-    --color-link: #ba11ee;
-    --color-secondary: #920de9;
-    --color-secondary-accent: #920de90b;
-    --color-shadow: #f4f4f4;
-    --color-table: #000000;
-    --color-text: #000;
-    --color-text-secondary: #999;
-    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    --hover-brightness: 1.1;
-    --justify-important: center;
-    --justify-normal: center;
-    --line-height: 1.5;
-    --width-card: 285px;
-    --width-card-medium: 460px;
-    --width-card-wide: 800px;
-    --width-content: 1080px;
+#story-wrapper {
+    padding: 0 50px;
 }

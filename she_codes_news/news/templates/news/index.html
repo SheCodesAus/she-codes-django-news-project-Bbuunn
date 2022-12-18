@@ -2,28 +2,29 @@
 {% load static %}
 
 {% block stylesheets %}
-{% comment %} <link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}"> {% endcomment %}
+<link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}">
 {% endblock %}
 {% block content %}
-
-{% if latest_stories %}
-<div id="latest-stories">
+<div id="contents">
+  {% if latest_stories %}
   <h2>Latest News</h2>
-  {% for story in latest_stories %}
-    {% include './storyCard.html' with story=story position=forloop.counter %}
-  {% endfor %}
-</div>
-{% endif %}
-
-<div id="all-stories">
-  {% if all_stories %}
-    {% for story in all_stories %}
-     {% include './storyCard.html' with story=story %}
+  <div id="latest-stories">
+    {% for story in latest_stories %}
+      {% include './storyCard.html' with story=story position=forloop.counter %}
     {% endfor %}
-  {% else %}
-    <p>No stories are available.</p>
+  </div>
   {% endif %}
-</div>
 
+  <h2>All Stories</h2>
+  <div id="all-stories">
+    {% if all_stories %}
+      {% for story in all_stories %}
+      {% include './storyCard.html' with story=story %}
+      {% endfor %}
+    {% else %}
+      <p>No stories are available.</p>
+    {% endif %}
+  </div>
+</div>
 
 {% endblock %}

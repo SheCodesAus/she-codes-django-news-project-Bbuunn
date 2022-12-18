@@ -8,6 +8,7 @@ form {
     width: 70%;
     align-items: flex-start;
     flex-direction: column;
+    padding: 0 50px;
 }
 
 textarea {
@@ -30,4 +31,12 @@ textarea {
     border-radius: 4px;
     background-color: #f8f8f8;
     resize: none;
+  }
+
+  h2 {
+    padding: 0 50px;
+  }
+
+  #contents {
+    padding: 0 50px;
   }
