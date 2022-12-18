@@ -61,6 +61,10 @@
     padding: 0 50px;
 }
 
-#user, #login {
-    margin-left: 20%;
+#user, #login, #delete {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#delete h3 {
+    margin: 40px 0 15px 0;
 }

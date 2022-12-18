@@ -2,24 +2,25 @@
 {% load static %}
 
 {% block stylesheets %}
-<link rel="stylesheet" type="text/css" href="{% static 'news/createStory.styles.css' %}">
+<link rel='stylesheet' type='text/css' href="{% static 'news/styles.css' %}">
 {% endblock %}
 
 {% block content %}
 
+<div id="delete">
 {% if request.user.is_authenticated %}
-    <p>Are you sure you want to delete this story?</p>
+    <h3>Are you sure you want to delete this story?</h3>
     <form action="" method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="delete story">
     </form>
-    <p>Story being deleted:</p>
+    <h3>Story being deleted:</h3>
     <p>{{newsstory.title}}</p>
     <p>{{newsstory.content}}</p>
 {% else %}
     <p> Please <a href="{% url 'login' %}">login</a> to delete stories.</p>
 
 {% endif %}
-
+</div>
 {% endblock %}
