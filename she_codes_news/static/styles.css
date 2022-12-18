@@ -23,7 +23,13 @@ header img {
     width: 100%;
     background-color: white;
     margin: 5px 20px;
+    
 }
+
+#header-link {
+    width: 80%;
+}
+
 /* img {
     filter: grayscale(100%);
 } */

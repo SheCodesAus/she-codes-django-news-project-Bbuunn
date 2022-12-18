@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block stylesheets %}
+<link rel='stylesheet' type='text/css' href="{% static 'news/styles.css' %}">
+{% endblock%}
+
+
+{% block content %}
+
+<div id="author">
+  <h2>Author Information:</h2>
+  <h4>Username: {{ author.username }}</h4>
+  <h4>Date joined: {{ author.date_joined }}</h4>
+</div>
+
+<h2>All Stories Written By {{ author.username }}:</h2>
+<div id="author_stories">
+  {% if author_stories %}
+    {% for entry in author_stories %}
+        {# story= is variable from storyCard.html #}
+        {% include './storyCard.html' with story=entry %}
+    {% endfor %}
+  {% else %}
+    <p>No stories are available.</p>
+  {% endif %}
+</div>
+
+{% endblock %}

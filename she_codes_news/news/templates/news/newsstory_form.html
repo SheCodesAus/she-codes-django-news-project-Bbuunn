@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{% static 'news/createStory.styles.css' %}">
+{% endblock %}
+
+{% block content %}
+
+{% if request.user.is_authenticated %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="submit">
+    </form>
+{% else %}
+    <p> Please <a href="{% url 'login' %}">login</a> to update story.</p>
+
+{% endif %}
+
+{% endblock %}

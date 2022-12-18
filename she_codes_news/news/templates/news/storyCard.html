@@ -1,10 +1,14 @@
 <div class="story-card" id="story-card-{{ position }}">
   <a href="{% url 'news:story' story.id %}">
     <img src="{{ story.image_url }}"/>
-    <div class="story-card-text">
-      <h3>{{ story.title }}</h3>
-      <h4>{{ story.author }}</h4>
-      <h4>{{ story.pub_date }}</h4>
-    </div>
   </a>
+  <div class="story-card-text">
+    <a href="{% url 'news:story' story.id %}">
+      <h3>{{ story.title }}</h3>
+    </a>
+    <a href="{% url 'news:byAuthor' auth_id=story.author_id %}">
+      <h4>{{ story.author }}</h4>
+    </a>
+    <h4>{{ story.pub_date }}</h4>
+  </div>
 </div>

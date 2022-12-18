@@ -15,3 +15,11 @@ class StoryForm(ModelForm):
                 ),
             }
 
+# ORDER_CHOICE = (
+#     ("", "newest first"),
+#     ("oldfirst", "oldest first"),
+# )
+# class FilterForm(forms.Form):
+#     order = forms.ChoiceField(label="order", choices=ORDER_CHOICE, required=False)
+#     author = forms.ChoiceField(label="author", choices=ORDER_CHOICE, required=False)
+#     search = forms.CharField(label="search", required=False)
