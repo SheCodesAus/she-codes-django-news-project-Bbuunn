@@ -1,0 +1,23 @@
+Helpful Notes For Project
+
+Topic 1:
+Using {% url ??? %} in django templates
+
+Source:
+https://stackoverflow.com/questions/4599423/using-url-in-django-templates
+
+Relevant Information:
+{% url 'namespace:view_name' arg1=value1 arg2=value2 as the_url %}
+<a href="{{ the_url }}"> link_name </a>
+
+Used in:
+she_codes_news/templates/nav.html
+    <a href="{% url 'users:user' pk=user.id %}">{{ user.username }}</a>
+
+
+
+Topic 2:
+Adding Image To Python Django Web App
+
+Source:
+https://www.mytecbits.com/internet/python/addding-image-django-web-app#:~:text=Create%20a%20folder%20for%20images,folder%20static%2Fdj_app%2Fmedia.

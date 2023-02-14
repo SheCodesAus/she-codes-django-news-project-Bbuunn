@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+ 
+{% load static %}
+{% block stylesheets %}
+<link rel='stylesheet' type='text/css' href="{% static 'news/styles.css' %}">
+{% endblock%}
+
+{% block content %}
+
+<div id="user">
+  {% if request.user.is_authenticated %}
+  <h2>My Account Information:</h2>
+  <h4>Username: {{ user.username }}</h4>
+  <h4>Email: {{ user.email }}</h4>
+  <h4>Last login: {{ user.last_login }}</h4>
+  <h4>Date joined: {{ user.date_joined }}</h4>
+  {% else %}
+  <p> Please login to view your account information.</p>
+  {% endif %}
+</div>
+
+{% endblock %}
